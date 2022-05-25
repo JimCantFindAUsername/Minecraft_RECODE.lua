@@ -1,0 +1,30 @@
+UIS.InputEnded:Connect(function(input)
+               if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                    if Mouse.CursorPosition:GetNearestChild("Door") then 
+                         local Open=false
+                         
+                         if Open==true then 
+                              Door.CanCollide = false
+                              Door.Transparency = 1
+                              
+                              
+                              Door.Parent.Door2.Transparency = 0
+                              Door.Parent.Door2.CanCollide = true
+                              Open=false
+                              
+                         end
+                         
+                         if Open==false
+                              Door.CanCOllide = true 
+                              Door.Transpareny = 0
+                              
+                              Door.Parent.Door2.Transparency = 1
+                              Door.Parent.Door2.CanCollide = false
+                              
+                              Open=true
+                         end
+                    end
+               end
+          end
+     end
+end) 
