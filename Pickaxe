@@ -1,0 +1,88 @@
+
+local UIS = game:GetService("UserInputService")
+local Mouse = game.Players.LocalPlayer:GetMouse()
+
+if script.Parent.Enabled == true then
+     if game.ServerStorage.Values.Gamemode.Value == Creative then
+          UIS.InputEnded:Connect(function(input)
+               if input.UserInputType == Enum.UserInputType.MouseButton1 then               
+                    local Block = script.Parent.Block.Value:Duplicate()
+               
+                    Block.Position = Mouse.CursorPosition
+               end
+          end)
+     
+          UIS.InputEnded:Connect(function(input)
+               if input.UserInputType == Enum.UserInputType.MouseButton2 then
+                    Mouse.CursorPosition:GetNearestChild("Part", script.Parent.Block.BlockName.Value):Destroy
+               end
+          end)
+     end
+     
+     --BLOCKS
+     if game.ServerStorage.Values.Gamemode.Value == Survival then
+          UIS.InputEnded:Connect(function(input)
+               if input.UserInputType == Enum.UserInputType.MouseButton1 then               
+                    local Block = script.Parent.Block.Value:Duplicate()
+               
+                    Block.Position = Mouse.CursorPosition
+                    
+                    script.Parent.Amount = script.Parent.Amount-1
+               end
+          end)
+     --Pickaxe
+          UIS.InputEnded:Connect(function(input)
+               if input.UserInputType == Enum.UserInputType.MouseButton2 then
+                    script.Parent.Amount = script.Parent.Amount - script.Parent.HurtAmount
+                    if Mouse.CursorPosition:GetNearestChild("Part").Breakable.Value == true then
+                         if Mouse.CursorPosition:GetNearestChild("Part").Type.Value == Ore then
+                              if Mouse.CursorPosition:GetNearestChild("Part").TakesToDestory.Value.Contains(script.Parent.Name) == true then
+                                   wait(script.Parent.TimeToBreak.Value)
+                                   if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                                        Mouse.CursorPosition:GetNearestChild("Part", script.Parent.Block.BlockName.Value):Destroy
+                                        
+                                        if game.Players.localPlayer.Backpack:CountItems() == >40 then
+                                             if game.Players.localPlayer.Position == script.Parent.Position 
+                                                  Mouse.CursorPosition:GetNearestChild("Part").Parent = game.Players.localPlayer.Backpack
+                                             end
+                                        else
+                                             end
+                                        end
+                                   end
+                                   
+                                   Mouse.CursorPosition:GetNearestChild("Part", script.Parent.Block.BlockName.Value):Destroy
+                              end
+                         end
+                         
+                         
+                         if Mouse.CursorPosition:GetNearestChild("Part").Type.Value == Block then 
+                              Mouse.CursorPosition:GetNearestChild("Part", script.Parent.Block.BlockName.Value):Destroy
+                              
+                              if game.Players.localPlayer.Backpack:CountItems() == >40 then
+                                   if game.Players.localPlayer.Position == script.Parent.Position 
+                                        Mouse.CursorPosition:GetNearestChild("Part").Parent = game.Players.localPlayer.Backpack
+                                   else
+                                        end
+                                   end  
+                              end
+                         end 
+                    
+                    elseif Mouse.CursorPosition:GetNearestChild("Part").Type.Value == Water then
+                         if script.Parent.Name == "Water Bucket" then
+                              Mouse.CursorPosition:GetNearestChild(Part.Name = SourceBlock).Destroy
+                         end
+                    end
+               end
+          end)
+     end
+     
+     if game.ServerStorage.Values.Gamemode.Value == Spectator then
+          end
+     end
+     
+     if game.ServerStorage.Values.Gamemode.Value == Adventure then
+          end
+     end
+end
+
+
