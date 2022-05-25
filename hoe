@@ -1,0 +1,9 @@
+if script.Parent.Enabled == true then     
+     UIS.InputEnded:Connect(function(input)
+          if input.UserInputType == Enum.UserInputType.MouseButton1 then               
+               if script.Parent:GetNearestChild("Part").Name == "Dirt" then
+                    script.Parent:GetNearestChild("Part").IsTilled.Value == true
+               end
+          end
+     end)
+end
