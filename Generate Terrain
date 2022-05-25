@@ -1,0 +1,106 @@
+game.ServerStorage.Events.CreateNewWorld.Fired:Connect(function(player)
+     local Bedrock = game.ServerStorage.Items.Blocks.Bedrock:Duplicate
+     
+     local :function(Fill( = [
+     
+          local DuplicateX = local.Parent:Duplicate
+          local DuplicateZ = local.Parent:Duplicate
+          
+          while true do
+          
+               if DuplicateX.Position == local.Number1 then
+                    DuplicateX.Position = local.Parent.Position.X + 3 
+               end
+          
+               if DuplicateX.Position == local.Number2 then
+                    DuplicateX.Position = local.Parent.Position.Z + 3 
+               end
+          end
+     ]
+     
+     local :function(FillNOTFLAT( = [
+     
+          local DuplicateX = local.Parent:Duplicate
+          local DuplicateY = local.Parent:Duplicate
+          local DuplicateZ = local.Parent:Duplicate
+          
+          local Terrain = math.Random("Plain", "Birch", "Oak", "DeepWood", "Desert", "Sahara", "Snow", "Mountain", "MountainWithHole", "Volcano", "Ocean", "Village")
+          local VERSION = math.Random(1-100)
+          local RandomPosition = math.Random(x, y, z)
+          
+          while true do
+          
+               if DuplicateX.Position == local.Number1 then
+                    DuplicateX.Position = local.Parent.Position.X + 3 
+               end
+          
+               if DuplicateX.Position == local.Number2 then
+                    DuplicateX.Position = local.Parent.Position.Z + 3 
+                    
+                    if DuplicateY.Position == >64 then
+                         if Terrain == Plain then
+                              game.ServerStorage.Terrains.Plain.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                         
+                         if Terrain == Birch then
+                              game.ServerStorage.Terrains.Birch.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                         
+                         if Terrain == Oak then
+                              game.ServerStorage.Terrains.Oak.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                         
+                         if Terrain == Deepwood then
+                              game.ServerStorage.Terrains.Deepwood.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                         
+                         if Terrain == Desert then
+                              game.ServerStorage.Terrains.Desert.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                         
+                         if Terrain == Sahara then
+                              game.ServerStorage.Terrains.Sahara.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                         
+                         if Terrain == Snow then
+                              game.ServerStorage.Terrains.Snow.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                         
+                         if Terrain == Mountain then
+                              game.ServerStorage.Terrains.Mountain.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                         
+                         if Terrain == MountainWithHole then
+                              game.ServerStorage.Terrains.MountainWithHole.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                         
+                         if Terrain == Volcano then
+                              game.ServerStorage.Terrains.Volcano.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                         
+                         if Terrain == Ocean then
+                              game.ServerStorage.Terrains.Ocean.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                         
+                         if Terrain == Village then
+                              game.ServerStorage.Terrains.Ocean.Version:WaitForChild(VERSION).Position = RandomPosition
+                         end
+                    end
+               end
+          end
+     ]
+     
+     
+     local MapSize = game.ServerStorage.Events.CreateNewWorld.MapSize.Value
+     
+     
+     if game.ServerStorage.Events.CreateNewWorld.WorldType == Superflat then
+          :function(Fill(MapSize/2, MapSize/2)
+     end
+     
+     if game.ServerStorage.Events.CreateNewWorld.WorldType == Not-Superflat then
+          :function(FillNOTFLAT(MapSize/2, MapSize/2)
+     end
+end)
+
+
