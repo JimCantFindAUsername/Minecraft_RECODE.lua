@@ -1,0 +1,60 @@
+
+while true do
+     wait(math.Random(3, 4, 5, 6, 7, 8))
+     
+     if script.Parent.IsHostileATM.Value == false then
+     
+
+          script.Parent.Position = script.Parent.Position math.Random(+, -) Vector3.new(math.Random, 0, math.Random)
+          script.Parent.Rotation = script.Parent.Rotation math.Random(+, -) Vector3.new(math.Random, 0, 0) 
+          
+          if script.Parent:GetNearestChild("Part").Position == script.Parent.Position+Vector3.new(1, 1, 1) then
+               script.Parent.Position = script.Parent.Position + Vector3.new(0, 1, 0)
+          end
+          
+     elseif script.Parent.IsHostileATM.Value == true then
+          local plr = script.Parent:GetNearestChild(player)
+          
+          while true do 
+               script.Parent.Humanoid.PathFindingService.Enabled = true
+               
+               script.Parent.Humanoid.PathFindingService.PointB = plr.Position 
+          end
+          
+          function inZone()
+               if script.Parent.Name = "Creeper" then
+                    script.Sizzle:Play()
+                    script.Parent.Texture.VideoTexture.Enabled = true
+                    
+                    local Explosion = Instance.new("Explosion")
+                    
+                    Explosion.Parent = script.Parent
+                    
+                    Explosion.Size = 30
+                    
+                    Explosion.Heat = 10000
+                    
+                    wait(2)
+                    script.Parent:Destroy()
+               
+               elseif script.Parent.DamageMethod == Poisen then
+                    
+                    local Potions = game.Players.localPlayer.PotionApplied.Value
+                    
+                    Potions = Potions + script.Parent.Potions.Value
+                    
+                    
+                    wait(script.Parent.Potions.Time)
+                    
+                    Potions = Potions - game.Players.localPlayer.PotionApplied.Value = script.Parent.Potions.Value
+                    
+               elseif script.Parent.DamageMeathod == Punch then
+                    
+                    game.Players.localPlayer.Health = game.Players.localPlayer.Health - script.Parent.HurtAmount
+               emd
+               
+          end
+          
+          script.ZONE.Touched:Connect(inZone)
+     end
+end
