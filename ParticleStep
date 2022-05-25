@@ -1,0 +1,5 @@
+script.Parent.Touched:Connect(function(player)
+     script.Parent.Server.ParticleEmitter.Enabled = true
+     wait(0.5)
+     script.Parent.Server.ParticleEmitter.Enabled = false
+end)
