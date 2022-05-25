@@ -1,0 +1,9 @@
+if script.Parent.Enabled == true then     
+     UIS.InputEnded:Connect(function(input)
+          if input.UserInputType == Enum.UserInputType.KeyboardSHIFT then               
+               game.Players.localPlayer.Walkspeed = 26
+          else
+               game.Players.localPlayer.Walkspeed = 16
+          end
+     end)
+end
