@@ -1,0 +1,24 @@
+if game.ServerStorage.Values.Gamemode.Value == Creative then
+     
+     game.Players.localPlayer.Health.Enabled = false
+     game.Players.localPlayer.PlayerGUI.UI.Enabled = true
+     game.Players.localPlayer.PlayerGUI.UI.Survival.Visible = false
+
+elseif game.ServerStorage.Values.Gamemode.Value == Survival then
+
+     game.Players.localPlayer.Health.Enabled = true
+     game.Players.localPlayer.PlayerGUI.UI.Enabled = true
+     game.Players.localPlayer.PlayerGUI.UI.Survival.Visible = true
+
+elseif game.ServerStorage.Values.Gamemode.Value == Spectator then
+
+     game.Players.localPlayer.Health.Enabled = false
+     game.Players.localPlayer.PlayerGUI.UI.Enabled = false
+
+elseif game.ServerStorage.Values.Gamemode.Value == Adventure then
+
+     game.Players.localPlayer.Health.Enabled = true
+     game.Players.localPlayer.PlayerGUI.UI.Enabled = true
+     game.Players.localPlayer.PlayerGUI.UI.Survival.Visible = true
+
+end
