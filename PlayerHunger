@@ -1,0 +1,58 @@
+game.ServerStorage.Values.Gamemode.Value == Survival then     
+     if game.ServerStorage.Values.Difficulty.Value == Easy then
+          if game.Players.localPlayer.WalkSpeed == 16 then
+               while true do
+                    game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value = game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value-1
+                    wait(45)
+               end
+          elseif game.Players.localPlayer.WalkSpeed == 24 then
+               while true do
+                    game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value = game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value-1
+                    wait(15)
+               end
+          end
+     elseif game.ServerStorage.Values.Difficulty.Value == Medium then
+          if game.Players.localPlayer.WalkSpeed == 16 then
+               while true do
+                    game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value = game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value-1
+                    wait(30)
+               end
+          elseif game.Players.localPlayer.WalkSpeed == 24 then
+               while true do
+                    game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value = game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value-1
+                    wait(10)
+               end
+          end
+     elseif game.ServerStorage.Values.Difficulty.Value == Hard then
+          if game.Players.localPlayer.WalkSpeed == 16 then
+               while true do
+                    game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value = game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value-1
+                    wait(23)
+               end
+          elseif game.Players.localPlayer.WalkSpeed == 24 then
+               while true do
+                    game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value = game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value-1
+                    wait(7)
+               end
+          end
+     end
+     
+     
+     
+     
+     while true do
+          if game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value == >5
+               if game.Players.localPlayer.Health == <100 then
+                    game.Players.localPlayer.Health = game.Players.localPlayer.Health+10
+               end
+          else
+               end
+          end
+     end
+
+end
+
+
+if game.Players.localPlayer.PlayerGUI.Survival.HungerValue.Value == 1< 
+     game.Players.localPlayer.Health = game.Players.localPlayer.Health-10
+end
