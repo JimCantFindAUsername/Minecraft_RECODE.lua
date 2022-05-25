@@ -1,0 +1,16 @@
+UIS.InputEnded:Connect(function(input)
+               if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                    if Mouse.CursorPosition:GetNearestChild("Player", "Animal") then 
+                         Player.Health = Player.Health - script.Parent.DAMAGEVALUE.Value
+                         Player.Position = Player.Position.FindPivotDIfference(script.Parent.Position) - script.Parent.KNOCKBACK.Value
+                         
+                         if script.Parent.Enchantments.Contains("SetFire") == true then
+                              local Fire = game.ServerStorage.Effects.Fire:Duplicate()
+                              
+                              Fire.Parent = Player
+                         end
+                    end
+               end
+          end
+     end
+end) 
