@@ -1,0 +1,62 @@
+if script.Parent.Enabled == true then     
+     UIS.InputEnded:Connect(function(input)
+          if input.UserInputType == Enum.UserInputType.MouseButton1 then               
+               if script.Parent:GetNearestChild("Part").Name == "Dirt" then
+                    if script.Parent:GetNearestChild("Part").IsTilled.Value == true then
+                         if script.Parent:GetNearestChild("Part").IsTilled.Plant == "" then
+                              script.Parent:GetNearestChild("Part").IsTilled.Plant.Value = script.Parent.Name
+                              script.Parent:GetNearestChild("Model".Name == ["Beets", "Carrots", "Wheat", "Melon"]).IsPlanted.Value = true
+                         emd
+                    end
+               end
+          end
+     end)
+end
+
+--GROWING
+
+
+if script.Parent.IsPlanted.Value == true then
+     if script.Parent:GetNearestChild("Model".Name == "Water").Position == script.Parent.Position + 1,, 2 then
+          script.Parent.GrowthRate.Value == 3
+          
+     end
+end
+
+wait(script.Parent.GrowthRate.Value)
+
+script.Parent.Stage1.Transparancy = 1
+script.Parent.Stage2.Transparancy = 0
+
+wait(script.Parent.GrowthRate.Value)
+
+script.Parent.Stage2.Transparancy = 1
+script.Parent.Stage3.Transparancy = 0
+
+wait(script.Parent.GrowthRate.Value)
+
+script.Parent.Stage3.Transparancy = 1
+script.Parent.Stage4.Transparancy = 0
+
+function touch()
+     if Player.Position == script.Parent.Position+1 then
+          if script.Parent.Stage4.Transparancy == 1 then
+               script.Parent:Destroy
+               
+               if game.Players.localPlayer.Backpack:CountItems() == >40 then
+                    if game.Players.localPlayer.Position == script.Parent.Position 
+                         Mouse.CursorPosition:GetNearestChild("Part").Parent = game.Players.localPlayer.Backpack
+                    end
+               else
+                    end
+               end
+               
+          elseif
+               script.Parent:Destroy
+          end
+     end
+end
+
+script.Parent.Touched:Connect(touch)
+
+
