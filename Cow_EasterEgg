@@ -1,0 +1,20 @@
+if script.Parent.CowNameTag.Value == _Jim then
+     script.DO.Enabled == true
+     
+     while true do 
+          if script.DO.Enabled == true then
+               local newMilk = game.ServerStorage.Items.HandHeld.MILK:Duplicate
+               
+               newMilk.Nametag.Value = "Cum"
+               
+               newMilk.Parent = game.Workspace
+               
+               newMilk.Position = game.Players.localPlayer.Position + 75
+          end
+          wait(0.1)
+     end
+     
+     wait(15)
+     
+     script.DO.Enabled == false
+end
