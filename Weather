@@ -1,0 +1,36 @@
+if game.ServerStorage.Settings.WeatherEnabled == true then
+     wait(600)
+     local weather = math.Random("Dry", "Rain", "Thunder")
+     
+     if weather == "Dry" then
+          game.Workspace.Weather.Rain:GetChildren("Particle Emitter").Enabled = false
+     end
+     
+     if weather == "Rain" then
+          game.Workspace.Weather.Rain:GetChildren("Particle Emitter").Enabled = true
+          game.Workspace.Weather.Rain:GetChildren("Particle Emitter").Amount = 20     
+     end
+     
+     if weather == "Thunder" then
+          game.Workspace.Weather.Rain:GetChildren("Particle Emitter").Enabled = false
+          game.Workspace.Weather.Rain:GetChildren("Particle Emitter").Amount = 50
+          
+          while true do
+          
+               wait(15)
+               
+               game.Workspace.Weather.Rain.Thunder:Play()
+          end
+          
+          while true do
+               
+               wait(math.Random(16, 20, 24, 28, 30, 34))
+               
+               game.Workspace.Weather.Rain.Lightning.Transparancy = 0
+               wait(0.1)
+               game.Workspace.Weather.Rain.Lightning.Transparancy = 1
+               game.Workspace.Weather.Rain.Thunder:Play()
+          end
+     end
+end
+
