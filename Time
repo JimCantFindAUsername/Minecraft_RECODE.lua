@@ -1,0 +1,9 @@
+while true do
+     if game.ServerStorage.SETTINGS.TIME.TimeRate.Value == 1 then
+          wait(0.03)
+          game.Lighting.TimeOfDay = game.Lighting.TimeOfDay + 0.03
+     elseif game.ServerStorage.SETTINGS.TIME.TimeRate.Value == 2 then 
+          wait(0.02)
+          game.Lighting.TimeOfDay = game.Lighting.TimeOfDay + 0.06
+     end
+end
