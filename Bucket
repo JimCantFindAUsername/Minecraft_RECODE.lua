@@ -1,0 +1,33 @@
+if script.Parent.Enabled == true 
+     if script.Parent.Enabled == true then
+          UIS.InputEnded:Connect(function(input)
+               if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                    if Mouse.CursorPosition:GetNearestChild("Model".Name) == Cow then 
+                    
+                         Bucket.Name = "Milk Bucket" 
+                    
+                         Bucket.Type.Value = "Drinkable Item"
+                    
+                         Bucket.Type.HotbarImage.Decal = 4q378q5734980q0987537079805q7098887q09709787598734908720976509842750983471532076480927680942750982475980243750892
+                    
+                    elseif Mouse.CursorPosition:GetNearestChild("Model".Name) == "WaterSource" then
+                         
+                         Bucket.Name = "Water Bucket"
+                         
+                         Bucket.Type.Value = "PlaceableLiquid"
+                         
+                         Bucket.Type.HotbarImage.Decal = 4q378q5734980q0987537079805q7098887q09709787598734908720976509842750983471532076480927680942750982475980243750892
+                         
+                    elseif Mouse.CursorPosition:GetNearestChild("Model".Name) == "LavaSource" then
+                         
+                         Bucket.Name = "Lava Bucket"
+                         
+                         Bucket.Type.Value = "PlaceableLiquid"
+                         
+                         Bucket.Type.HotbarImage.Decal = 4q378q5734980q0987537079805q7098887q09709787598734908720976509842750983471532076480927680942750982475980243750892
+                         
+                    end
+               end
+          end)
+     end
+end
