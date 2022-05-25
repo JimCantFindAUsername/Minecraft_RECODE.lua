@@ -1,0 +1,39 @@
+function ChildAdded()
+     p = game.Players:WaitForChild(p)
+     animation = script.Animation
+     
+     p.Humanoid:LoadAnimation(animation)
+     
+     animation:Play(p.humanoid)
+     
+     
+     
+     local dim = game.Lighting.SleepDim
+     
+     while true do
+          if script.Dimming.Value == true then
+               wait(0.05)
+               dim.Transparancy = dim.Transparancy-0.01
+          end
+     end
+     
+     wait(5)
+     dim.Transparancy = 1
+     
+     script.Dimming.Value = false
+     
+     
+     script.Parent:WaitForChild(p).Parent = game.Workspace
+     
+end
+
+
+function ChildRemoved()
+     p = game.Players:WaitForChild(p)
+     animation = script.Animation
+     
+     animation:Stop(p.humanoid)
+end
+
+script.Parent.ChildAdded:Connect(ChildAdded)
+script.Parent.ChildRemoved:Connect(ChildRemoved)
