@@ -1,0 +1,12 @@
+if script.Parent:GetNearestChild("Part").Flammable.Value == true then
+     wait(5)
+     local fire2 = script.Parent:Duplicate()
+     
+     fire2.Parent = script.Parent:GetNearestChild("Part")
+end
+
+if script.Parent:GetNearestChild("Part").Flammable.Value == true then
+     wait(script.Parent:GetNearestChild("Part").Flammable.FlameTime.Value)
+     
+     script.Parent:Destroy()
+end
