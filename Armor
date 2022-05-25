@@ -1,0 +1,12 @@
+if script.Parent.Parent == game.Players.localPlayer.Armor then
+     game.Players.localPlayer.Health = game.Players.localPlayer.Health + script.Parent.HealthAddAmount
+     
+     if script.Parent.DamageTaken == 0 then
+          script.Parent.BreakSound:Play
+          script.Parent:Destroy
+     end
+end
+
+function script.Parent.Hit(uwu)
+     script.Parent.DamageTaken = script.Parent.DamageTaken - uwu.GiveDamage  
+end
