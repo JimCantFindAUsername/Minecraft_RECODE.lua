@@ -1,0 +1,60 @@
+
+if game.ServerStorage.Values.Difficulty.Value == Peaceful then
+     
+     game.Workspace:GetChildren([Model.Name == ["Slime", "Zombie", "Whither", "Spider", "CaveSpider", "Creeper", "Bat", "Blazed", "Drowned", "Endermite", "Evoker", 
+          "Guardian", "Hoglin", "Phantom", "Piglem"]]):Destroy()
+
+elseif game.ServerStorage.Values.Difficulty.Value == Easy then
+
+     while true do
+          local NewMob = math.Random("Slime", "Zombie", "Spider", "Creeper")
+     
+          local MOB = game.ServerStorage.MONSTERS:WaitForChild(NewMob)
+     
+          MOB.Position = Vector3.new(math.Random(game.ServerStorage.LoadedChunkX.Value, game.ServerStorage.LoadedChunkZ.Value), MOB:GetNearestChild("Part", -Y).Position, 
+               math.Random(game.ServerStorage.LoadedChunkZ, game.ServerStorage.LoadedChunkX))
+     
+          MOB:GetChildren("Part").Transparancy = 1
+          wait(10)
+          MOB:GetChildren("Part").Transparancy = 0
+          
+          repeat(1)
+          wait(30)
+     end     
+     
+elseif elseif game.ServerStorage.Values.Difficulty.Value == Medium then
+
+     while true do
+          local NewMob = math.Random("Slime", "Zombie", "Spider", "Creeper", Witch)
+     
+          local MOB = game.ServerStorage.MONSTERS:WaitForChild(NewMob)
+     
+          MOB.Position = Vector3.new(math.Random(game.ServerStorage.LoadedChunkX.Value, game.ServerStorage.LoadedChunkZ.Value), MOB:GetNearestChild("Part", -Y).Position, 
+               math.Random(game.ServerStorage.LoadedChunkZ, game.ServerStorage.LoadedChunkX))
+     
+          MOB:GetChildren("Part").Transparancy = 1
+          wait(10)
+          MOB:GetChildren("Part").Transparancy = 0
+          
+          repeat(2)
+          wait(24)
+     end     
+
+elseif game.ServerStorage.Values.Difficulty.Value == Medium then
+
+     while true do
+          local NewMob = math.Random("Slime", "Zombie", "Spider", "Creeper", Witch)
+     
+          local MOB = game.ServerStorage.MONSTERS:WaitForChild(NewMob)
+     
+          MOB.Position = Vector3.new(math.Random(game.ServerStorage.LoadedChunkX.Value, game.ServerStorage.LoadedChunkZ.Value), MOB:GetNearestChild("Part", -Y).Position, 
+               math.Random(game.ServerStorage.LoadedChunkZ, game.ServerStorage.LoadedChunkX))
+     
+          MOB:GetChildren("Part").Transparancy = 1
+          wait(10)
+          MOB:GetChildren("Part").Transparancy = 0
+          
+          repeat(3)
+          wait(15)
+     end     
+end
