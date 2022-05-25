@@ -1,0 +1,6 @@
+function Broken()
+     script.Parent.BlockBroken.Position = script.Parent
+     script.Parent.BlockBroken.Transparancy = 0
+     script.Parent.BlockBroken.Parent = game.Workspace
+end
+
