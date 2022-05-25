@@ -1,0 +1,159 @@
+if script.Parent:GetNearestChildren(Contains(["Part".Powered.Value == true], RedstoneBlock, RedstoneTorch)) then
+     
+     script.Parent.Color = "Bright Red"
+     script.Parent.Powered.Value = true
+     
+elseif script.Parent:GetNearestChildren(Contains(RedstoneDust)
+
+     script.Parent.Color = "Bright Red"
+     script.Parent.Powered.Value = true
+     
+     script.Parent:FindDifference(RedstoneDust)
+     
+     if FindDifference == 90,, -270 then
+          script.Parent.Texture = POSITION 90 DEGREE ANGLE iuwhwehewphaegrkjhearkjherlkjgerhkljearhaerkjlhagkjhaekljaekhaelkjgaehlkjgahlkjghraelkjhkjgha
+     end
+     
+     
+     if FindDifference == 180 then
+          script.Parent.Texture = STRAIGHT ANGLE iuwhwehewphaegrkjhearkjherlkjgerhkljearhaerkjlhagkjhaekljaekhaelkjgaehlkjgahlkjghraelkjhkjgha
+     end
+     
+     
+     if FindDifference == -90,, 270 then
+          script.Parent.Texture = POSITION 90 DEGREE ANGLE iuwhwehewphaegrkjhearkjherlkjgerhkljearhaerkjlhagkjhaekljaekhaelkjgaehlkjgahlkjghraelkjhkjgha
+     end
+     
+     
+     if FindDifference == Error then
+          script.Parent.Texture = DOT iuwhwehewphaegrkjhearkjherlkjgerhkljearhaerkjlhagkjhaekljaekhaelkjgaehlkjgahlkjghraelkjhkjgha
+     end
+     
+     
+     if script.Parent.Powered == true then
+          script.Parent.Value = FindDiffence.RedstoneLeft.Value-1
+     end
+else
+     
+     script.Parent.Color = "Crimson"
+     script.Parent.Powered.Value = false
+     
+end
+
+
+--REPEATER
+if script.Parent:GetNearestChildren(Contains(["Part".Powered.Value == true], RedstoneBlock, RedstoneTorch, RedstoneDust)) then
+     if script.Parent:GetNearestChild("Part").Position.X:GetDifference(script.Parent.Position.X) == script.Parent.X+3 then
+          script.Parent.HasPower.Value = true
+          script.Parent.Powered.Value = true
+          
+          NearestChild.RedstoneLeft.Value = 10
+     end
+end
+
+
+
+--LAMP 
+
+if script.Parent.HasPower.Value == true then
+     
+     script.Parent.Light.Material = Enum.Material.Neon
+     script.Parent.Light.Light.Enabled = true
+     
+elseif script.Parent.Powered.Value == true then
+
+     script.Parent.Light.Material = Enum.Material.Neon
+     script.Parent.Light.Light.Enabled = true
+     
+else
+     
+     script.Parent.Light.Material = Enum.Material.Glass
+     script.Parent.Light.Light.Enabled = false
+     
+end
+
+
+
+if script.Parent:GetNearestChild("Part").Powered.Value == true then 
+     script.Parent.HasPower.Value == true
+else
+     script.Parent.HasPower.Value == false
+end
+
+
+
+--PISTON
+
+if script.Parent.HasPower.Value == true then
+     while true do 
+          if script.PUSHINGOUT.Value == true then
+               script.Parent.Piston.PISTONPART.Position = script.Parent.Piston.PISTONPART.Position + 0.01
+               wait(0.01)
+          elseif script.PUSHINGOUT.Value == false then
+               end
+          end
+          
+          if script.PULLINGIN.Value == true then
+               script.Parent.Piston.PISTONPART.Position = script.Parent.Piston.PISTONPART.Position - 0.01
+               wait(0.01)
+          elseif script.PULLINGIN.Value == false then
+               end
+          end
+     end
+     
+     if script.Parent.Piston.PISTONPART.Position.X == script.Parent.Piston.PISTONPART.Position.X+ script.Parent.Piston.PISTONPART.Size.X then
+          script.Parent.PUSHINGOUT.Value = false
+     end     
+     
+elseif script.Parent.Powered.Value == true then
+     
+     while true do 
+          if script.PUSHINGOUT.Value == true then
+               script.Parent.Piston.PISTONPART.Position = script.Parent.Piston.PISTONPART.Position + 0.01
+               wait(0.01)
+          elseif script.PUSHINGOUT.Value == false then
+               end
+          end
+          
+          if script.PULLINGIN.Value == true then
+               script.Parent.Piston.PISTONPART.Position = script.Parent.Piston.PISTONPART.Position - 0.01
+               wait(0.01)
+          elseif script.PULLINGIN.Value == false then
+               end
+          end
+     end
+     
+     if script.Parent.Piston.PISTONPART.Position.X == script.Parent.Piston.PISTONPART.Position.X+ script.Parent.Piston.PISTONPART.Size.X then
+          script.Parent.PUSHINGOUT.Value = false
+     end
+     
+     if script.Parent.Piston.PISTONPART.Position.X == script.Parent.Piston.PISTONPART.Position.X- script.Parent.Piston.PISTONPART.Size.X then
+          script.Parent.PULLINGIN.Value = false
+     end
+     
+else
+    script.Parent.PULLINGIN.Value = true
+end
+
+
+
+if script.Parent:GetNearestChild("Part").Powered.Value == true then 
+     script.Parent.HasPower.Value == true
+else
+     script.Parent.HasPower.Value == false
+end
+
+
+--Observer
+
+if script.Parent:GetNearestChild("Part").Position.X:GetDifference(script.Parent.Position.X) == script.Parent.X+3 then
+     
+     script.Parent.Powered.Value = true
+     script.Parent.HasPower.Value = true
+
+else
+
+     script.Parent.Powered.Value = false
+     script.Parent.HasPower.Value = false
+
+end
