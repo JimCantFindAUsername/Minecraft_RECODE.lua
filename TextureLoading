@@ -1,0 +1,5 @@
+if script.Parent:WaitForChild("Weld") == game.Output.Error then
+     script.Parent.Texture.Texture.Visible = false
+else
+     script.Parent.Texture.Texture.Visible = true 
+end
